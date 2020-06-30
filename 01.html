@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>    
+        p{
+            color: red;
+            background-color: cyan;
+            font-size: 30px;
+            /* HTML的值
+            color CSS屬性 ,red CSS的值   */
+        }
+        h1{
+           font-size: 60px;
+           color: orange;
+        }
+        /* .選取類別 */
+        .info{
+            background-color: pink;
+            font-size: 40px;
+            color: purple;
+        }
+        .news{
+            background-color: chartreuse;
+            color: red;
+        }
+        /* class優生學大於標籤 
+        同樣類別Class後面會蓋過前面*/
+        p.news#june{
+            color: royalblue;
+        }
+        p#june{
+            color: pink;
+        }
+        /* 更明確的選取 */
+        #june{
+            color:blueviolet;
+        }
+        p{
+            color:blue;
+            background-color: cyan;
+            font-size: 30px;
+            /* HTML的值
+            color CSS屬性 ,red CSS的值   */
+        }
+    </style>
+    <!-- HTML屬性 -->
+</head>
+<body>
+    <h1>title</h1>
+    <p  class="info news txt" id="june">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia rerum minima. Sequi animi minima, eum eaque, repellendus quisquam veniam aspernatur quam vero saepe in asperiores architecto quae nesciunt optio.</p>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia rerum minima. Sequi animi minima, eum eaque, repellendus quisquam veniam aspernatur quam vero saepe in asperiores architecto quae nesciunt optio.</p>
+     <p style=>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia rerum minima. Sequi animi minima, eum eaque, repellendus quisquam veniam aspernatur quam vero saepe in asperiores architecto quae nesciunt optio.</p>
+     <h2>title</h2>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia rerum minima. Sequi animi minima, eum eaque, repellendus quisquam veniam aspernatur quam vero saepe in asperiores architecto quae nesciunt optio.</p>
+     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia rerum minima. Sequi animi minima, eum eaque, repellendus quisquam veniam aspernatur quam vero saepe in asperiores architecto quae nesciunt optio.</p>
+      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim mollitia rerum minima. Sequi animi minima, eum eaque, repellendus quisquam veniam aspernatur quam vero saepe in asperiores architecto quae nesciunt optio.</p>
+      <!-- class中可有不同值,用空格分開 -->
+      <!-- id只會有一個類似身分證 -->
+</body>
+</html>
