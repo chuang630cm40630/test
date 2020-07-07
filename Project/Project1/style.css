@@ -338,13 +338,14 @@ padding-left: 150px;
     padding-right: 20px;
     padding-bottom: 30px;
     padding-left: 55px;
-    margin: 120px;
+    margin: 120px 120px 0px 120px;
 }
 .volunteer-text1{
     margin: 0;
+    height: 550px;
 }
 .volunteer-world1{
-padding-bottom: 40px;
+/* padding-bottom: 40px; */
 margin: 0;
 font-size: 50px;
 font-weight: 700;
@@ -353,6 +354,7 @@ text-align: right;
 }
 .volunteer-text2{
     margin: 0;
+    height: 550px;
 }
 .volunteer-text2 img{
     height: 371.6px;
