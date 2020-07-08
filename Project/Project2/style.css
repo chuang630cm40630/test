@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+.arrow{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color:black;
+    color:white;
+    font-size: 24px;
+    z-index: 1;
+    border-radius: 100%;
+    border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+    }
+    .arrow:hover{
+        background-color:green;
+        transition: .9s;
+    }
+    .header{
+        background-color: rgb(21,116,21);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        height: 30px;
+        padding: 15px 0px;
+        }
+        .sale{
+            color: white;
+            font-size: 16px;
+            margin: 15px 120px;
+            font-weight: 300;
+        }
+        .menu{
+            color: white;
+            font-size: 14px;
+            margin: 15px 120px;
+        }
+        .menu a{
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+           vertical-align: baseline;
+            cursor: pointer;
+        }
+        .logo{
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            align-items: center;
+        }
+        .icon {
+            margin: 15px 120px;}
+        .logo .nav{
+            display: flex;
+           margin: 15px 120px;
+}    
+.logo .nav a{
+    color: rgb(107,103,103);
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.main{
+    margin: 0;
+    height: 800px;
+    position: relative;
+    background-image: url(./image/leaves.png);
+    background-position: bottom;
+}
+.text{
+    position: absolute;
+    margin: 0;
+    top: 30%;
+    left: 5%;
+}
+.text :first-child{
+    font-weight: bolder;
+    color: rgb(39,28,28);
+    font-size: 60px;
+    margin: 15px;
+    text-align: left;
+}
+ .text b{
+     color: rgb(9,124,19);
+ }         
+ .text :nth-child(3){
+     margin: 10px;
+     font-size: 24px;
+     text-align: left;
+ } 
+ .main button{
+     margin: 20px;
+     width: 120px;
+     height: 80px;
+     background-color: rgb(52,185,52);
+     border: none;
+     color: white;
+ }  
+ .welcome{
+     text-align: center;
+     margin: 15px;
+ }   
+ h1{
+     font-size: 60px;
+     color:rgb(23,105,23);
+ }
+ .three{
+     display: flex;
+ }
+ .three .wrap{
+     margin: 20px;
+     text-align: center;
+ }
+ .three img{
+     width: 20%;
+     margin: 10px;
+ }
+ h2{
+     font-size: 30px;
+     color: rgb(60,61,60);
+     margin: 15px;
+     font-weight: bolder;
+ }
+ .three p{
+     color: rgb(119,118,118);
+     font-size: 18px;
+     margin: 15px;
+ }
+ .two-pic{
+     display: flex;
+     margin: 15px 120px;
+ }
+ .sale-pic img{
+     width: 100%;
+ }
+ .product{
+     margin: 15px 120px;
+ }
+ h3{
+     text-align: center;
+     font-size: 60px;
+     margin: 15px;
+     color: rgb(60,61,60);
+ }
+ .products-nav{
+     text-align: center;
+     margin: 15px 120px;
+ }
+ .products-nav a{
+     color: rgb(60,61,60);
+     text-decoration: none;
+     margin: 0 10px;
+ }
+ .sale-items{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     margin: 15px 120px;
+ }
+ .fresh{
+     background-image: url(./image/Fruits.png);
+     display: flex;
+     /* justify-content: center;
+     align-items: center; */
+     height: 480px;
+     margin: 15px 0;
+     background-position: center;
+ }
+ .love{
+     margin: 30px 120px;
+     display: flex;
+
+ }
+ .love img{
+     width: 100%;
+ }
+ .lastest{
+     background-image: url(./image/gray.png);
+     height: 800px;
+ }
+ .cereal{
+     display: flex;
+     flex-wrap: wrap;
+     margin: auto;
+     justify-content: center;
+ }
+ .cereal .sale{
+     width: 25%;
+ }
+
+
+
