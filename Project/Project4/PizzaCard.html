@@ -73,46 +73,47 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
     </script>
     <script type='module'>
-        import { $g } from '../Modules/helpers.js';
+        import { $g } from './Modules/helpers.js';
         let row = $g('.row');
         let xhr = new XMLHttpRequest();
         const url = "https://raw.githubusercontent.com/chuang630cm40630/FileStorage/master/pizza_menu.json";
 
         xhr.onload = function () {
-            let card=$g('#cardPizza');
-            let cloneContent=card.content.cloneNode(true);
+            let card = $g('#cardPizza');
+            let cloneContent = card.content.cloneNode(true);
             let menuObject = JSON.parse(this.responseText);
-               // msg.innerText = menuObject.pizza_menu[0].name;
-               for(let i=0;i<menuObject.pizza_menu.length;i++){
+            // msg.innerText = menuObject.pizza_menu[0].name;
+            for (let i = 0; i < menuObject.pizza_menu.length; i++) {
 
-               
 
-            cloneContent=card.content.cloneNode(true);
-            cloneContent.querySelector('h5').innerText= menuObject.pizza_menu[i].name;
-            cloneContent.querySelector('p').innerText=menuObject.pizza_menu[i].english_name;
-            cloneContent.querySelector('img').src=`image/${menuObject.pizza_menu[i].picture}`;
-            cloneContent.querySelector('.big_price').innerText= menuObject.pizza_menu[i].big_price;
-            cloneContent.querySelector('.small_price').innerText= menuObject.pizza_menu[i].small_price;
 
-            cloneContent.querySelector('.btn').addEventListener('click',function () {
-                //alert("龍蝦沙拉披薩")
-                this.setAttribute("data-toggle","modal");
-                this.setAttribute("data-target","#exampleModal");
-                let modal=$g('#exampleModal')
-                modal.querySelector('h5').innerText=menuObject.pizza_menu[i].name;
-                modal.querySelector('p').innerText=menuObject.pizza_menu[i].english_name;
-                //modal.querySelector('.modal-body').innerText="<h1>龍蝦沙拉披薩<h1>";
-                    modal.querySelector('#pizzaImage').src=`image/${menuObject.pizza_menu[i].picture}`;
-                    
-                    modal.querySelector('#description').innerText=menuObject.pizza_menu[i].stuffing;
-                
-            });
-            row.append(cloneContent);}
+                cloneContent = card.content.cloneNode(true);
+                cloneContent.querySelector('h5').innerText = menuObject.pizza_menu[i].name;
+                cloneContent.querySelector('p').innerText = menuObject.pizza_menu[i].english_name;
+                cloneContent.querySelector('img').src = `image/${menuObject.pizza_menu[i].picture}`;
+                cloneContent.querySelector('.big_price').innerText = menuObject.pizza_menu[i].big_price;
+                cloneContent.querySelector('.small_price').innerText = menuObject.pizza_menu[i].small_price;
+
+                cloneContent.querySelector('.btn').addEventListener('click', function () {
+                    //alert("龍蝦沙拉披薩")
+                    this.setAttribute("data-toggle", "modal");
+                    this.setAttribute("data-target", "#exampleModal");
+                    let modal = $g('#exampleModal')
+                    modal.querySelector('h5').innerText = menuObject.pizza_menu[i].name;
+                    modal.querySelector('p').innerText = menuObject.pizza_menu[i].english_name;
+                    //modal.querySelector('.modal-body').innerText="<h1>龍蝦沙拉披薩<h1>";
+                    modal.querySelector('#pizzaImage').src = `image/${menuObject.pizza_menu[i].picture}`;
+
+                    modal.querySelector('#description').innerText = menuObject.pizza_menu[i].stuffing;
+
+                });
+                row.append(cloneContent);
+            }
         }
         xhr.open('GET', url);
-            xhr.send();
+        xhr.send();
     </script>
-    <script>
+    <!-- <script>
         let xhr = new XMLHttpRequest();
         const url = "https://raw.githubusercontent.com/chuang630cm40630/FileStorage/master/pizza_menu.json";
         //requestJSON();
@@ -131,7 +132,7 @@
             xhr.open('GET', url);
             xhr.send();
         }
-    </script>
+    </script> -->
 
 </body>
 
