@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style type="text/css">
-		*{
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		* {
 			margin: 0;
 			padding: 0;
-            list-style: none;
-            font-family: 微軟正黑體;
+			list-style: none;
+			font-family: 微軟正黑體;
 
 		}
-		.item-group{
+
+		.item-group {
 			width: 960px;
 			margin: auto;
 			/*background-color: pink;*/
 			margin-bottom: 100px;
 		}
-		.item-group .title{
+
+		.item-group .title {
 			width: 320px;
 			color: #fff;
 			position: relative;
 		}
-		.item-group:nth-child(even) .title{
+
+		.item-group:nth-child(even) .title {
 			margin-left: auto;
 		}
-		.item-group .title h2{
+
+		.item-group .title h2 {
 			background-color: #aa0000;
 			font-size: 40px;
 		}
-		.item-group .title h2 span{
+
+		.item-group .title h2 span {
 			transform: rotate(90deg);
 			display: inline-block;
 			width: 40px;
 			height: 40px;
 		}
-		.item-group .title .info{
+
+		.item-group .title .info {
 			background-color: #000;
 			padding: 10px;
 			position: absolute;
 			width: 100%;
 			box-sizing: border-box;
 		}
-		.item-group .title .info h3{}
-		.item-group .title .info p{}
+
+		.item-group .title .info h3 {}
+
+		.item-group .title .info p {}
+
 		/*============*/
-		.item-group .pic{
+		.item-group .pic {
 			width: 720px;
 			margin-left: 190px;
 		}
-		.item-group:nth-child(even) .pic{
+
+		.item-group:nth-child(even) .pic {
 			margin-left: 0;
 		}
-        .item-group .pic img{
+
+		.item-group .pic img {
 			width: 100%;
 			vertical-align: middle;
 		}
 
 		/*==============*/
-		.item-group .txt{
+		.item-group .txt {
 			width: 700px;
 			margin-left: 20px;
 			background-color: #ccc;
@@ -68,11 +80,13 @@
 			position: relative;
 			z-index: 1;
 		}
-		.item-group .txt span{
+
+		.item-group .txt span {
 			display: flex;
 			align-items: center;
 		}
-		.item-group .txt span::after{
+
+		.item-group .txt span::after {
 			content: '';
 			width: 20px;
 			height: 5px;
@@ -81,28 +95,33 @@
 			flex-grow: 1;
 			margin-left: 1em;
 		}
-		.item-group:nth-child(even) .txt{
+
+		.item-group:nth-child(even) .txt {
 			margin-left: auto;
-        }
-        
-		
+		}
+
+
 		.item-group .car {
 			width: 720px;
 			margin-left: 160px;
 		}
-		.item-group .car >img {
+
+		.item-group .car>img {
 			width: 100%;
 			vertical-align: middle;
 		}
+
 		.item-group .car .play-icon {
 			position: relative;
 		}
+
 		.item-group .car .play-icon img {
 			height: 50px;
 			position: absolute;
 			bottom: 195px;
 			right: -39px;
 		}
+
 		.item-group .gray {
 			width: 445px;
 			height: 200px;
@@ -114,11 +133,11 @@
 			margin: auto;
 			z-index: -1;
 		}
-
 	</style>
 </head>
+
 <body>
-    
+
 	<div class="item-group">
 		<!-- 紅黑 -->
 		<div class="title">
@@ -131,14 +150,14 @@
 				<p>透過最佳重量分配，現平順起步、直線穩定加速，過彎同時保持車身平穩，帶給駕駛更靈敏的道路反饋，享受隨心馳騁的行駛快感。</p>
 			</div>
 		</div>
-		
-        <!-- 影片 -->
-        <div class="car">
-	        <img class="carpic" src="/image/car.png" alt="toyoya">
-            <div class="play-icon">
-                <img class=play src="/image/play.png" alt="play-botton" >
-            </div>
-             <div class="gray"></div>
+
+		<!-- 影片 -->
+		<div class="car">
+			<img class="carpic" src="image/car.png" alt="toyoya">
+			<div class="play-icon">
+				<img class=play src="image/play.png" alt="play-botton">
+			</div>
+			<div class="gray"></div>
 		</div>
 
 		<!-- 詳細文字 -->
@@ -150,10 +169,10 @@
 			<p>．車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</p>
 			<h3>高性能懸吊</h3>
 			<p>．TNGA透過懸吊的高乘載強度及完美懸吊幾何設定保持輪胎貼地性，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭體驗。</p>
-        </div>
-        
+		</div>
+
 	</div>
-	
+
 
 	<div class="item-group">
 		<!-- 紅黑 -->
@@ -164,17 +183,17 @@
 			</h2>
 			<div class="info">
 				<h3>行車更安心的高剛性車體</h3>
-				<p>您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。	</p>
+				<p>您的愛車會妥善保護您，強悍穩固的車身可使您安全無虞。世界級的安全功能讓您輕鬆自如享受旅程、毫無後顧之憂。 </p>
 			</div>
 		</div>
-		
+
 		<!-- 影片 -->
 		<div class="car">
-	        <img class="carpic" src="/image/woman.png" alt="woman">
-            <div class="play-icon">
-                <img class=play src="/image/play.png" alt="play-botton" >
-            </div>
-             <div class="gray"></div>
+			<img class="carpic" src="image/woman.png" alt="woman">
+			<div class="play-icon">
+				<img class=play src="image/play.png" alt="play-botton">
+			</div>
+			<div class="gray"></div>
 		</div>
 
 		<!-- 詳細文字 -->
@@ -184,11 +203,11 @@
 			<p>．以先進的TSS系統，主動偵測路況，輔助駕駛判斷路況並維持行車安全。</p>
 			<h3>被動安全</h3>
 			<p>．堅固的高剛性車體，使用熱沖壓材料的高強度抗扭鋼板，強化座艙對意外事故的保護力。</p>
-			
-        </div>
-       
+
+		</div>
+
 	</div>
-	
+
 
 	<div class="item-group">
 		<!-- 紅黑 -->
@@ -202,14 +221,14 @@
 				<p>車室空間設計著重人體工學，透過方向盤、踏板等位置優化，追求更舒適的駕駛位置，並以新型座椅設計，提高座椅包覆性，致力實現長途駕駛不疲勞的舒適駕馭體驗。</p>
 			</div>
 		</div>
-		
+
 		<!-- 影片 -->
 		<div class="car">
-	        <img class="carpic" src="/image/man.png" alt="man">
-            <div class="play-icon">
-                <img class=play src="/image/play.png" alt="play-botton" >
-            </div>
-             <div class="gray"></div>
+			<img class="carpic" src="image/man.png" alt="man">
+			<div class="play-icon">
+				<img class=play src="image/play.png" alt="play-botton">
+			</div>
+			<div class="gray"></div>
 		</div>
 
 		<!-- 詳細文字 -->
@@ -221,10 +240,10 @@
 			<p>．考量駕駛坐進車內的高度，透過前擋風玻璃位置的調整，達到盲區最小化，使駕駛視野更開闊，同步提升駕馭安全。</p>
 			<h3>更寧靜的車室</h3>
 			<p>．採用最新三層結構的隔音材料，與引擎、變速箱的零件改革，將座艙的震動抑制在最小限度，提供乘客舒適安靜的感受。</p>
-        </div>
-        
+		</div>
+
 	</div>
-	
+
 
 	<div class="item-group">
 		<!-- 紅黑 -->
@@ -238,14 +257,14 @@
 				<p>藉由高度人性化的介面整合、傳遞車輛資訊，豐富日常駕駛體驗。從提升油耗表現到行李箱空間最適化，均細心考慮，更加貼切使用者真正所需與習慣，並給於即時回應</p>
 			</div>
 		</div>
-		
+
 		<!-- 影片 -->
 		<div class="car">
-	        <img class="carpic" src="/image/incar.png" alt="toyoya">
-            <div class="play-icon">
-                <img class=play src="/image/play.png" alt="play-botton" >
-            </div>
-             <div class="gray"></div>
+			<img class="carpic" src="image/incar.png" alt="toyoya">
+			<div class="play-icon">
+				<img class=play src="image/play.png" alt="play-botton">
+			</div>
+			<div class="gray"></div>
 		</div>
 
 		<!-- 詳細文字 -->
@@ -255,11 +274,11 @@
 			<p>．以AURIS為例，更強勁的高效引擎將熱效率提升至40%，達到世界級水準，屢屢突破燃油效率新境界。</p>
 			<h3>行李箱空間最適化</h3>
 			<p>．以PRIUS為例，透過將電池位置移到後座下方，讓行李箱擁有更大的空間。</p>
-        </div>
-       
-    </div>
+		</div>
 
-    <div class="item-group">
+	</div>
+
+	<div class="item-group">
 		<!-- 紅黑 -->
 		<div class="title">
 			<h2>
@@ -272,23 +291,24 @@
 			</div>
 		</div>
 		<div class="car">
-	        <img class="carpic" src="/image/car-body.png" alt="toyoya">
-            <div class="play-icon">
-                <img class=play src="/image/play.png" alt="play-botton" >
-            </div>
-             <div class="gray"></div>
+			<img class="carpic" src="image/car-body.png" alt="toyoya">
+			<div class="play-icon">
+				<img class=play src="image/play.png" alt="play-botton">
+			</div>
+			<div class="gray"></div>
 		</div>
-    <!-- 詳細文字 -->
-    <div class="txt">
-        <span>因為我們做了這些革新</span>
-        <h3>設計概念</h3>
-        <p>．TNGA低重心設計，不僅呈現更低伏的運動化外觀，更講究高品質內裝的一致性。</p>
-        <h3>環保概念</h3>
-        <p>．為了對環境保護盡一份心力，，我們全面提升傳統引擎、變速箱與油電複合動力的動力效能。</p>
-        </div>
-        
-</div>
+		<!-- 詳細文字 -->
+		<div class="txt">
+			<span>因為我們做了這些革新</span>
+			<h3>設計概念</h3>
+			<p>．TNGA低重心設計，不僅呈現更低伏的運動化外觀，更講究高品質內裝的一致性。</p>
+			<h3>環保概念</h3>
+			<p>．為了對環境保護盡一份心力，，我們全面提升傳統引擎、變速箱與油電複合動力的動力效能。</p>
+		</div>
+
+	</div>
 
 
 </body>
+
 </html>
