@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>用XMLHttpRequest請求GitHub JSON資料</h1>
+    <button id='button1'>Request JSON1</button>
+    <button id='button2'>Request JSON2</button>
+    <button id='button3'>Request JSON3</button>
+    <button id='button4'>Request JSON4</button>
+    <button id='btnClear'>Clear</button>
+    <div id='msg'></div>
+
+    <script type="module">
+        import { $g } from "../Modules/helpers.js"
+
+          //console.log($g("#button1").innerText);
+
+          let btn1=$g("#button1").addEventListener('click',function(){});
+
+         let btn2=$g("#button2").addEventListener('click',requestJSON);
+         let btn3=$g("#button3").addEventListener('click',requestJSON);
+
+         let msg=$g("#msg");
+
+         let xhr=new XMLHttpRequest();
+         const url="https://raw.githubusercontent.com/chuang630cm40630/FileStorage/master/iPad.json";
+
+         function requestJSON1(){
+             xhr.onload=function(){
+             msg.innerText=this.responseText;
+             console.log(this);//this為XMLHttpRequest物件
+             console.log(this.responseText);
+
+             let ipadObject=JSON.parse(this.responseText);
+             console.log(iPadObject);
+            }
+             xhr.open('GET',url);
+            xhr.send();
+         }
+         function requestJSON2(){
+             xhr.onload=function(){
+                 let response=this.response;
+                 let responseText=this.responseText;
+                 let responseType=this.responseType;
+                 let responseUrl=this.responseURL;
+                 let status=this.status;
+                 let statusText=this.statusText;
+                 let readyState=this.readyState;
+
+                 msg.innerText=this.responseText;
+                 console.log(this);
+             }
+             xhr.open('GET',url);
+             xhr.send();
+            }
+            function requestJSON3(){
+                let xhr=new XMLHttpRequest();
+             xhr.onload=function(){
+                if(xhr.readyState==4&&xhr.status==200){
+                    msg.textContent=this.responseText;
+                }else{
+                    msg.textContent='發生錯誤，HTTP reponse代碼:'+
+                    xhr.status;
+                }
+                }
+             console.log(iPadObject);
+            }
+             xhr.open('GET',url);
+            xhr.send();    
+                 
+            
+      
+
+        // let btn1=$g("#button1").addEventListener('click',requestJSON);
+        // let btn2=$g("#button2").addEventListener('click',requestJSON);
+        // let btn3=$g("#button3").addEventListener('click',requestJSON);
+        // let btn4=$g("#button4").addEventListener('click',requestJSON);
+    </script>
+</body>
+
+</html>

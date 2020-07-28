@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const ipads = [{
+                "sku": "MW762",
+                "price": 10900,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 32GB - 金色",
+                "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW792",
+                "price": 13900,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 128GB - 金色",
+                "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW742",
+                "price": 10900,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 32GB - 太空灰色",
+                "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW772",
+                "price": 13900,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 128GB - 太空灰色",
+                "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW752",
+                "price": 10900,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 32GB - 銀色",
+                "picture": "ipad_silver.png"
+            },
+            {
+                "sku": "MW782",
+                "price": 13900,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi 機型 128GB - 銀色",
+                "picture": "ipad_silver.png"
+            },
+            {
+                "sku": "MW6D2",
+                "price": 15400,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 32GB - 金色",
+                "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW6G2",
+                "price": 18400,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 128GB - 金色",
+                "picture": "ipad_gold.png"
+            },
+            {
+                "sku": "MW6A2",
+                "price": 15400,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 32GB - 太空灰色",
+                "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW6E2",
+                "price": 18400,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 128GB - 太空灰色",
+                "picture": "ipad_space.png"
+            },
+            {
+                "sku": "MW6C2",
+                "price": 15400,
+                "storage": "32GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 32GB - 銀色",
+                "picture": "ipad_silver.png"
+            },
+            {
+                "sku": "MW6F2",
+                "price": 18400,
+                "storage": "128GB",
+                "description": "10.2 吋 iPad Wi-Fi + 行動網路機型 128GB - 銀色",
+                "picture": "ipad_silver.png"
+            }
+        ];
+    </script>
+    <script>
+        //讀取物件keys與values -> 轉成陣列
+        // const titleArray = Object.keys(ipads[0]);
+        // const dataArray = Object.values(ipads[0]);
+        // console.table(titleArray);
+        // console.table(dataArray);
+        let xhr = new XMLHttpRequest();
+        const url = 'https://raw.githubusercontent.com/apprunner/FileStorage/master/iPad_DataFixed.json';
+
+        let ipadArray = [];
+
+        function requestJSON() {
+            xhr.onload = function () {
+                // msg.innerText = this.responseText;
+                // console.log(this);  //this為XMLHttpRequest物件
+
+                let ipadObject = JSON.parse(this.responseText);
+                console.log(ipadObject);
+
+                ipadArray = ipadObject.products;
+                console.table(ipadArray);
+
+                console.table(Object.keys(ipadArray[0]));
+                console.table(Object.values(ipadArray[0]));
+            }
+
+            xhr.open('GET', url);
+            xhr.send();
+
+            //1.create table
+            let table = document.createElement('table');
+            let thead = document.createElement('thead');
+            let tbody = document.createElement('tbody');
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            //2.create body
+            let body = document.querySelector('body');
+            body.appendChild(table);
+
+            //建立th元素
+            function createTH(text) {
+                let th = document.createElement('th');
+                th.innerText = text;
+                return th;
+            }
+            //建立td元素
+            function createTD(text) {
+                let td = document.createElement('td');
+                td.innerText = text;
+                return td;
+            }
+
+
+            //3.Create Thead,['sku,'price','storage','description']
+            //tr&th-thead
+            let tr1 = document.createElement('tr');
+            tr1.append(createTH('Sku'));
+            tr1.append(createTH('Price'));
+            tr1.append(createTH('Storage'));
+            tr1.append(createTH('Description'));
+
+
+        }
+    </script>
+</body>
+
+</html>
