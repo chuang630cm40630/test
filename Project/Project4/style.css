@@ -1,0 +1,87 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+.card {
+  border: 1px solid #DF600F;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.headshot {
+  overflow: hidden;
+}
+
+.card-title {
+  color: #007642;
+  background-color: #fff8ec;
+  display: inline-block;
+  border-radius: 5px;
+  /* padding: 5px 15px 5px 15px; */
+}
+
+.card-body {
+  background-color: #fff8ec;
+}
+
+.card:hover {
+  -webkit-box-shadow: 8px 8px 15px #808080;
+          box-shadow: 8px 8px 15px #808080;
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+}
+
+.card:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.card:not(:hover) img {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.card:hover .card-body {
+  background-color: #fff8ec !important;
+}
+
+.card:hover .card-title {
+  color: #DF600F;
+  background-color: white !important;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price span {
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #007642;
+  color: #fff;
+  border-radius: 1.5em;
+  font-size: 15px;
+  text-align: center;
+}
+
+.price .big_price {
+  margin-right: 25px;
+}
+
+.modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */

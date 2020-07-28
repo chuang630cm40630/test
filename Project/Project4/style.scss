@@ -1,0 +1,71 @@
+* {
+    font-family: 微軟正黑體;
+}
+
+.card {
+    border: 1px solid #DF600F;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.headshot {
+    overflow: hidden;
+}
+
+.card-title {
+    color: #007642;
+    background-color: #fff8ec;
+    display: inline-block;
+    border-radius: 5px;
+    /* padding: 5px 15px 5px 15px; */
+}
+
+.card-body {
+    background-color: #fff8ec;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 15px #808080;
+    transform: translate(5px, 5px);
+}
+
+.card:hover img {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.card:not(:hover) img {
+    transform: scale(1, 1);
+    transition: transform 0.3s;
+}
+
+.card:hover .card-body {
+    background-color: #fff8ec !important;
+}
+
+.card:hover .card-title {
+    color: #DF600F;
+    background-color: white !important;
+}
+
+.price {
+    display: flex;
+
+    span {
+        height: 1.5em;
+        width: 1.5em;
+        background-color: #007642;
+        color: #fff;
+        border-radius: 1.5em;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .big_price {
+        margin-right: 25px;
+    }
+}
+
+.modal-header {
+    display: flex;
+}

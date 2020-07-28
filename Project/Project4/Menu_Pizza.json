@@ -1,0 +1,63 @@
+{
+    "menu": [{
+            "name": "炭火肉食披薩",
+            "picture": "pizza-1.png"
+        },
+        {
+            "name": "美式嗆司臘腸披薩",
+            "picture": "pizza-2.png"
+        },
+        {
+            "name": "龍蝦沙拉披薩",
+            "picture": "pizza-3.png"
+        },
+        {
+            "name": "總匯披薩",
+            "picture": "pizza-4.png"
+        },
+        {
+            "name": "墨西哥嗆辣披薩",
+            "picture": "pizza-5.png"
+        },
+        {
+            "name": "西西里燻雞披薩",
+            "picture": "pizza-6.png"
+        },
+        {
+            "name": "海鮮披薩",
+            "picture": "pizza-7.png"
+        },
+        {
+            "name": "地中海漁夫披薩",
+            "picture": "pizza-8.png"
+        },
+        {
+            "name": "夏威夷披薩",
+            "picture": "pizza-9.png"
+        },
+        {
+            "name": "蔬菜披薩(奶素)",
+            "picture": "pizza-10.png"
+        },
+        {
+            "name": "蘋果肉桂披薩",
+            "picture": "pizza-11.png"
+        },
+        {
+            "name": "義式海陸豪華披薩",
+            "picture": "pizza-12.png"
+        },
+        {
+            "name": "洋食黃金脆雞披薩",
+            "picture": "pizza-13.png"
+        },
+        {
+            "name": "波隆那臘腸披薩",
+            "picture": "pizza-14.png"
+        },
+        {
+            "name": "日式燒肉披薩",
+            "picture": "pizza-15"
+        }
+    ]
+}
