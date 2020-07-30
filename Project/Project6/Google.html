@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlKWP4uWjQIR3WDAWLAu6rUhBfc3_ppag&callback=initMap&libraries=&v=weekly"
+        defer></script>
+    <style type="text/css">
+  
+    </style>
+    <script>
+        "use strict";
+
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 25.0414,
+                    lng: 121.5364
+                },
+                zoom: 18
+            });
+            // Markers放圖釘
+            var marker = new google.maps.Marker({
+                position: {
+                    lat: 25.0414,
+                    lng: 121.5364
+                },
+                map: map,
+                title: 'Hello World!'
+            });
+        }
+    </script>
+    <script>
+        var features = []
+    </script>
+</head>
+
+<body>
+    <div id="map"></div>
+</body>
+
+</html>
