@@ -1,0 +1,90 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item {
+  margin: 15px 0;
+}
+
+.iphone-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.iphone-color input[type='radio'] {
+  display: none;
+}
+
+.iphone-color input[type='radio'] label {
+  display: block;
+}
+
+.iphone-color input[type='radio']:checked + .iphone-lay {
+  border: 2px solid #0070c9;
+  -webkit-box-shadow: 0 0 0 5px #c2e0fd;
+          box-shadow: 0 0 0 5px #c2e0fd;
+}
+
+.iphone-lay {
+  padding: 65px 0;
+  width: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #d6d6d6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.iphone-lay:hover {
+  border: 2px solid #888888;
+}
+
+.iphone-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.iphone-color input[type='radio'] {
+  display: none;
+}
+
+.iphone-color input[type='radio'] label {
+  display: block;
+}
+
+.iphone-color input[type='radio']:checked + .iphone-lay {
+  border: 2px solid #0070c9;
+  -webkit-box-shadow: 0 0 0 5px #c2e0fd;
+          box-shadow: 0 0 0 5px #c2e0fd;
+}
+
+.iphone-color .iphone-lay {
+  padding: 65px 0;
+  width: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #d6d6d6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.iphone-color .iphone-lay .storage-num {
+  font-size: 29px;
+  font-weight: 600px;
+}
+
+.iphone-color .iphone-lay .storage-price {
+  font-size: 12px;
+}
+
+.iphone-color .iphone-lay:hover {
+  border: 2px solid #888888;
+}
+/*# sourceMappingURL=style.css.map */

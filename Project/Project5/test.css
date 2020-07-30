@@ -1,0 +1,31 @@
+.iphone-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.iphone-color input[type='radio'] {
+  display: none;
+}
+
+.iphone-color input[type='radio'] label {
+  display: block;
+}
+
+.iphone-color input[type='radio']:checked + .iphone-lay {
+  border: 2px solid #0070c9;
+  -webkit-box-shadow: 0 0 0 5px #c2e0fd;
+          box-shadow: 0 0 0 5px #c2e0fd;
+}
+
+.iphone-lay {
+  padding: 65px 120px;
+  border: 2px solid #d6d6d6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.iphone-lay:hover {
+  border: 2px solid #888888;
+}
+/*# sourceMappingURL=test.css.map */
