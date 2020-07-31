@@ -1,5 +1,5 @@
 function setColor(color) {
-    var iPhone_img = document.getElementsByClassName('iphone-family')[0];
+    var iPhone_img = document.getElementById('iphone-family');
     //取得後才能操作,類次css選取器
 
     if (color == 'white') {
