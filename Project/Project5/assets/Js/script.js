@@ -23,3 +23,10 @@ function setColor(color) {
 
 
 }
+
+function setPrice(price) {
+    // var finally_price = document.getElementsByClassName('finally-price')[0];
+    // finally_price.innerText = `NT$${price}`;
+
+    document.getElementsByClassName('finally-price')[0].innerText = `NT$${price}`;
+}
