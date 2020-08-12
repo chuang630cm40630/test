@@ -1,0 +1,15 @@
+* {
+    font-family: 微軟正黑體;
+}
+
+#fail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); //移動自己本身,第一個x軸第2個y軸
+    font-size: 50px;
+}
+
+.Failbar {
+    position: relative;
+}

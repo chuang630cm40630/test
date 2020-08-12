@@ -1,0 +1,18 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+#fail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+.Failbar {
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */
