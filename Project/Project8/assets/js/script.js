@@ -1,10 +1,10 @@
 // var chartData = {
 //     labels: ["美國", "日本", "泰國", "琉球", "紐西蘭", "澳洲"],
 //     data: [8, 22, 13, 15, 17, 21]
-// };
+// };放git轉json文字檔
 
 
-var chartData;
+var chartData;//宣告json上文字檔叫chartData變數
 var apiUrl = "https://raw.githubusercontent.com/chuang630cm40630/FileStorage/master/ChartData.json";
 
 // var json = JSON.stringify(chartData);
@@ -134,7 +134,7 @@ request2.done(function (chartData) {
 
     myChart.data.labels = chartData.labels;
     myChart.data.datasets[0].data = chartData.data
-    myChart.update()
+    myChart.update()//
 });
 
 //失敗

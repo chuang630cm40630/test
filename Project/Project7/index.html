@@ -21,7 +21,7 @@
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-start">開始</button>
                     <button type="button" class="btn btn-reset">放棄重來</button>
-                    <button type="button" class="btn btn-ans">看答案</button>
+                    <button type="button" class="btn btn-show-ans">看答案</button>
                 </div>
             </div>
             <div class="col-12 col-md-12 text-center pt-5">
@@ -36,13 +36,14 @@
                         <button class="btn btn-outline-secondary" type="button">Button</button>
                     </div>
                 </div> -->
-                <div class="user-guess-history"></div>
+               
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">猜數字</span>
                     </div>
 
-                    <input type="text" maxlength="4" class="form-control  user-guess-input"
+                    <input onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" type="text"
+                        maxlength="4" placeholder="請輸入4個數字(0-9)，數字不可重複" class="form-control  user-guess-input"
                         aria-label="Amount (to the nearest dollar)">
                     <div class="input-group-append">
                         <button class="btn btn-outline-secondary btn-guess" type="button">猜!</button>
@@ -51,6 +52,7 @@
             </div>
             <div class="col-12 col-md-12 text-center pt-5">
                 <div class="guessAns"></div>
+                <div class="user-guess-history"></div>
             </div>
         </div>
 

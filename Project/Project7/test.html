@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fx {
+            -webkit-display: flex;
+            display: flex;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        .fx>div {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .fx>div:first-child {
+            width: 30%;
+        }
+
+        .flex {
+            -webkit-flex: 1;
+            flex: 1;
+        }
+
+        #test-target {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fx">
+        <div>
+            <textarea rows="5" name="test-target" id="test-target"></textarea>
+            <button type="button" name="btn-clear-console" id="btn-clear-console">clear console</button>
+        </div>
+        <div class="flex">
+            <pre id="console-log"></pre>
+        </div>
+    </div>
+    <script>
+        let textarea = document.getElementById('test-target'),
+            consoleLog = document.getElementById('console-log'),
+            btnClearConsole = document.getElementById('btn-clear-console');
+
+        function logMessage(message) {
+            document.getElementById("console-log").innerHTML += message + "<br>";
+        }
+        textarea.addEventListener('keydown', (e) => {
+            if (!e.repeat)
+                logMessage(`Key "${e.key}" pressed  [event: keydown] ${e.which}`);
+            else
+                logMessage(`Key "${e.key}" repeating  [event: keydown]`);
+        });
+        textarea.addEventListener('beforeinput', (e) => {
+            logMessage(`Key "${e.data}" about to be input  [event: beforeinput]`);
+        });
+        textarea.addEventListener('input', (e) => {
+            logMessage(`Key "${e.data}" input  [event: input]`);
+        });
+        textarea.addEventListener('keyup', (e) => {
+            logMessage(`Key "${e.key}" released  [event: keyup]`);
+        });
+        btnClearConsole.addEventListener('click', (e) => {
+            let child = consoleLog.firstChild;
+            while (child) {
+                consoleLog.removeChild(child);
+                child = consoleLog.firstChild;
+            }
+        });
+    </script>
+</body>
+
+</html>
