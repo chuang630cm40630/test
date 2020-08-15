@@ -19,4 +19,25 @@
 .input-group .form-control {
   height: 100%;
 }
+
+.input-group .input-group-text {
+  background-color: #b03aff;
+  color: white;
+}
+
+.input-group .btn-guess {
+  width: 80px;
+  background-color: #38c0ff;
+  color: white;
+}
+
+h2 {
+  font-size: 38px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px #5900ff dashed;
+  padding-bottom: 5px;
+  color: #ff8800;
+}
 /*# sourceMappingURL=Style.css.map */

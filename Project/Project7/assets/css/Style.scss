@@ -19,13 +19,25 @@
     }
 }
 
-// .input-group .input-group-text {
-//     background-color: #3aff9c;
-//     color: white;
-// }
+.input-group .input-group-text {
+    background-color: #b03aff;
+    color: white;
+}
 
-// .input-group .btn-guess {
-//     width: 80px;
-//     background-color: #ff6638;
-//     color: white;
-// }
+.input-group .btn-guess {
+    width: 80px;
+    background-color: #38c0ff;
+    color: white;
+}
+
+h2 {
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+    //text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px rgb(89, 0, 255) dashed;
+    padding-bottom: 5px;
+    color: rgb(255, 136, 0);
+
+}
