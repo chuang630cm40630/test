@@ -1,27 +1,29 @@
-var guessAns = ""; //宣告變數var，裡面要放字串
+var guessAns = ''; //宣告變數var，裡面要放字串
+
 function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
-}
+} //給定亂數最小最大值
 // console.log(getRandom(1, 100));
 //floor無條件捨去
 // for (let i = 0; i < 100; i++) {
 //     process.stdout.write(getRandom(0, 9) + ', ');
 // }
 
-document.querySelector(".btn-start").addEventListener("click", gameStart);
+document.querySelector('.btn-start').addEventListener('click', gameStart);
 //我將gameStar交給click處理（指派這個function）（委派不用加()）
-document.querySelector(".btn-guess").addEventListener("click", userGuess);
-document.querySelector(".btn-show-ans").addEventListener("click", showAns);
-var myhtml = document.querySelector("html");
-myhtml.addEventListener("keydown", (e) => {
+document.querySelector('.btn-guess').addEventListener('click', userGuess);
+document.querySelector('.btn-show-ans').addEventListener('click', showAns);
+//指向按鈕加入某function委派給click
+var myhtml = document.querySelector('html');
+myhtml.addEventListener('keydown', (e) => {
     //Enter的值為13
     if (e.which == 13) {
         userGuess();
     }
 }); //整個BODY都可輸數字，不只框框內
 function userGuess() {
-    var user_guess = document.querySelector(".user-guess-input");
-    //等於輸入框
+    var user_guess = document.querySelector('.user-guess-input');
+    //等於輸入框，將user-guess-input取出(value)放入userguess中
     if (user_guess.value.length < 4) {
         //~user_guess.value == ''輸入內容等於0
         return;
@@ -37,13 +39,13 @@ function userGuess() {
             }
         }
     }
-    //將user-guess-input取出(value)放入userguess中
+
     document.querySelector(
-        ".user-guess-history"
+        '.user-guess-history'
     ).innerHTML += `${user_guess.value}:${A}A${B}B</br>`; //更新
     //userguess值放入user-guess-history
 
-    user_guess.value = "";
+    user_guess.value = ''; //清空字串
 }
 
 function gameStart() {
@@ -57,7 +59,7 @@ function gameStart() {
         set.add(random_num);
     }
     //把字串加起來
-    guessAns = ""; //空盒子清空
+    guessAns = ''; //空盒子清空
     //set大,item小,set有四個數，item將它取出
     for (var item of set) {
         guessAns = guessAns + item;
@@ -65,11 +67,11 @@ function gameStart() {
     }
 }
 function showAns() {
-    document.querySelector(".guessAns").innerText = guessAns;
+    document.querySelector('.guessAns').innerText = guessAns;
 }
 
 function gameStart2() {
-    console.log("Hello");
+    console.log('Hello');
     var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; //宣告0-9的陣列
     console.log(array);
     var rndIndex; //宣告亂數索引值
@@ -84,13 +86,15 @@ function gameStart2() {
     }
     array.length = 4; //把array截短4個，只要四個，js特有寫法
     //return array，給funtion之外的人看
-    document.querySelector(".guessAns").innerText = array; //把array顯示給使用者看，js特有寫法
+    document.querySelector('.guessAns').innerText = array; //把array顯示給使用者看，js特有寫法
 }
 
-let user_guess_input = document.querySelector(".user-guess-input"); //.user-guess-input是html語法
-user_guess_input.addEventListener("input", (e) => {
+let user_guess_input = document.querySelector('.user-guess-input'); //.user-guess-input是html語法
+user_guess_input.addEventListener('input', (e) => {
     var user_guess = user_guess_input.value; //輸入框的內容
-    var previous_user_guess = user_guess.substring(0, user_guess.length - 1); //房間內的人
+    var previous_user_guess = user_guess.substring(0, user_guess.length - 1); //房間內的人，-1代表去掉要進房的人
+
+    //是否有重複數字
     if (previous_user_guess.includes(e.data) == true) {
         //先做房內做判斷
         user_guess_input.value = previous_user_guess; //slice/substring抓子字串
@@ -101,7 +105,7 @@ user_guess_input.addEventListener("input", (e) => {
     //alert(1)
 });
 
-user_guess_input.addEventListener("keydown", (e) => {
+user_guess_input.addEventListener('keydown', (e) => {
     //Enter的值為13
     if (e.which == 13) {
         userGuess();
